@@ -1,0 +1,176 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px '돋움체';
+}
+
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #111;}
+
+#wrapper {
+    width: 980px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* 헤더영역 */
+header {
+    position: relative;
+    width: 100%;
+    height: 142px;
+    background: url('../img/head_top_line.png') no-repeat;            
+}
+
+header > .logo {
+    position: absolute;
+    left: 50%;
+    top: 16px;
+    margin-left: -95px;
+}
+
+header > p {
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+
+header > img {
+    float: right;
+    margin-top: 60px;
+}
+
+.gnb {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.gnb > li {
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-image: url('../img/head_menu_line.png');
+    background-repeat: no-repeat;
+    background-position-y: -6px;
+}
+
+.gnb > li > a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-position-y: 8px;
+}
+
+.gnb > li:nth-child(1) > a {background-image: url('../img/head_menu1.png');}
+.gnb > li:nth-child(2) > a {background-image: url('../img/head_menu2.png');}
+.gnb > li:nth-child(3) > a {background-image: url('../img/head_menu3.png');}
+.gnb > li:nth-child(4) > a {background-image: url('../img/head_menu4.png');}
+.gnb > li:nth-child(5) > a {background-image: url('../img/head_menu5.png');}
+
+.gnb > li:nth-child(1) > a:hover {background-image: url('../img/head_menu1_ov.png');}
+.gnb > li:nth-child(2) > a:hover {background-image: url('../img/head_menu2_ov.png');}
+.gnb > li:nth-child(3) > a:hover {background-image: url('../img/head_menu3_ov.png');}
+.gnb > li:nth-child(4) > a:hover {background-image: url('../img/head_menu4_ov.png');}
+.gnb > li:nth-child(5) > a:hover {background-image: url('../img/head_menu5_ov.png');}
+
+.gnb .badge {
+    position: absolute;
+    left: 100px;
+    top: -16px;
+}
+
+
+/* 푸터영역 */
+footer {
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+    border-top: 1px solid #d1cab2;
+    box-sizing: border-box;
+}
+
+footer > p {
+    float: right;
+    margin-right: 26px;
+    margin-top: 16px;
+    font: normal 11px '돋움';
+    color: #585858;
+    line-height: 18px;
+}
+
+/* 메인영역 */
+main {
+    width: 100%;
+    height: auto;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+main > div {
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid green;
+    box-sizing: border-box;
+}
+
+/* 메인 - slider */
+main > .slider {
+    height: 312px;
+}
+
+/* 메인 - quick */
+main > .quick {
+    height: 74px;
+}
+
+/* 메인 - latest */
+main > .latest {
+    height: 186px;
+}
+
+/* 메인 - info */
+main > .info {
+    height: 154px;
+}
+
+
+/* 서브페이지 공통 */
+#sub {
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+}
+#sub > div {
+    width: 100%;
+    height: 184px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+#sub > section {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+#sub > section > aside {
+    float: left;
+    width: 178px;
+    height: 650px;
+    border: 1px solid green;
+    box-sizing: border-box;
+}
+
+#sub > section > article {
+    float: left;
+    width: 800px;
+    height: 650px;
+    border: 1px solid green;
+    box-sizing: border-box;    
+}

@@ -1,0 +1,41 @@
+<script>
+	$(function(){
+		// 카테고리 메뉴 가져오기
+		var category = $('.category');
+		
+		$.get('/Kmarket/categories', function(result){
+			
+			$.each(result, function(i, data){
+				
+				var ico = '';
+				if(i==0) ico = 'fas fa-shopping-bag';
+				if(i==1) ico = 'fas fa-tshirt';
+				if(i==2) ico = 'fas fa-baby-carriage';
+				if(i==3) ico = 'fas fa-utensils';
+				if(i==4) ico = 'fas fa-home';
+				if(i==5) ico = 'fas fa-tv';
+				if(i==6) ico = 'fas fa-running';
+				if(i==7) ico = 'fas fa-car';
+				if(i==8) ico = 'fas fa-book';
+				
+				var tag  = "<li>";
+					tag += "<a href='#'><i class='"+ico+"'></i>"+data.title+"</a>";
+					tag += "<ol></ol>";
+					tag += "</li>";
+				
+				category.append(tag);
+				
+				$.each(data.cate2List, function(j, vo){
+					$('.category ol').eq(i).append("<li><a href='/Kmarket/shop/list?cate1="+vo.code1+"&cate2="+vo.code2+"'>"+vo.title+"</a></li>");
+				});
+			});
+		});
+	});
+</script>
+<!-- 카테고리 -->
+<ul class="category">     
+    <li><i class="fa fa-bars" aria-hidden="true"></i>카테고리</li>
+</ul>
+
+
+
